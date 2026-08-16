@@ -108,6 +108,16 @@ def plot_cases_and_deaths(data: pd.DataFrame) -> None:
     ax2.set_xlabel("Date")
     ax2.set_ylabel("New Deaths")
 
+    fig.text(
+        0.5,
+        0.01,
+        (
+            "Figure: Weekly new COVID-19 cases and deaths in Washington "
+            "State from January 2020 to May 2023."
+        ),
+        ha="center"
+    )
+
     plt.tight_layout()
     plt.savefig("weekly_cases_and_deaths.png")
     plt.close()
@@ -115,7 +125,7 @@ def plot_cases_and_deaths(data: pd.DataFrame) -> None:
 
 def plot_random_counties(data: pd.DataFrame) -> None:
     """
-    Saves six lineplots comparing comparing weekly cases and deaths
+    Saves six lineplots comparing weekly cases and deaths
     for three randomly selected Washington counties.
     """
     counties = data["county"].drop_duplicates()
@@ -197,6 +207,16 @@ def plot_random_counties(data: pd.DataFrame) -> None:
     peak_deaths3 = data3["New deaths"].max()
     axes[2, 1].set_title(
         f"{county3}: Weekly New Deaths, peak = {peak_deaths3:.0f}"
+    )
+
+    fig.text(
+        0.5,
+        0.01,
+        (
+            "Figure: Weekly new COVID-19 cases and deaths for three "
+            "randomly selected Washington counties."
+        ),
+        ha="center"
     )
 
     plt.tight_layout()
