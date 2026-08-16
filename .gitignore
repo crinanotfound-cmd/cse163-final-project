@@ -1,4 +1,10 @@
 .ipynb_checkpoints/
 __pycache__/
-Weekly_United_States_COVID-19_Cases_and_Deaths_by_County_-_ARCHIVED_20260719.csv
 
+Deaths and Cases.png
+weekly_cases_and_deaths.png
+major_peak_timing.png
+county_prominent_peaks.csv
+major_case_peak_magnitudes.csv
+major_death_peak_magnitudes.csv
+major_peak_timing_comparison.csv
